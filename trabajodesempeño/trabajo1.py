@@ -5,14 +5,13 @@ total_llanos = 0
 total_adultos = 0
 total_ninos = 0
 total_general = 0
-total_adultosC=0
-total_adultosL=0
+
 
 # solicitamos el numero de cotizaciones en este input
 num_cotizaciones = int(input("Ingrese el número de cotizaciones: "))
 
-# aqui hicimos el ciclo for sobre  el numero de cotizaciones, declarando las variables que debiamos traer segun el ejercicio 
-for _ in range(num_cotizaciones):
+
+for _ in range(3): #con este for cree un ciclo de que si añado 3 datos por ende se cerrara y me mostrara resultados finales!
     nombre_cliente = input("Ingrese el nombre del cliente: ")
     destino_turistico = input("Ingrese el destino (Guajira, Chicamocha o Llanos): ")
     numero_adultos = int(input("Ingrese el número de personas adultas: "))
@@ -28,27 +27,24 @@ for _ in range(num_cotizaciones):
         subtotal = numero_adultos * 1200000 + numero_ninos * 720000
         total_llanos += subtotal
 
-    total_adultosL+=numero_adultos
-    total_adultosC+=numero_adultos
+#el .lower no es necesario pero lo use para que el caracter se me convirtiera en minusculas en pocas palabras que el texto sea en MINUSCULA 
+
     total_adultos += numero_adultos
     total_ninos += numero_ninos #en este calculamos el total de cada persona X el numero 
     total_general += subtotal
     
     print("\nCotización:")
-    print("Nombre Cliente:", nombre_cliente)
+    print("Nombre Cliente:", nombre_cliente) #creamos imprimision inicial 
     print("Destino:", destino_turistico)
     print("Nro Personas Adultas:", numero_adultos)
     print("Nro Niños:", numero_ninos)
     print("Subtotal:", subtotal)
-    print("=" *30)
-    break
+    print("=" *30) #con este print creo como un tipo de linea como para hacerlo mas practico o es como un tipo de <br> por asi decirlo
+    
 
 # en este le imprimo lo ultimo solicitado en el trabajo trayendo cada total de las cosas
 
 print("\nResultados Finales:")
-print("Cantidad de personas que viajan para la Guajira:", total_adultos)
-print("Cantidad de personas que viajan para Cañón del Chicamocha:", total_adultosC)
-print("Cantidad de personas que viajan para los Llanos Orientales:", total_adultosL)
 print("Total de dinero de los viajes para la Guajira:", total_guajira)
 print("Total de dinero de los viajes para Cañón del Chicamocha:", total_chicamocha)
 print("Total de dinero de los viajes para los Llanos Orientales:", total_llanos)
