@@ -20,12 +20,15 @@ for _ in range(3): #con este for cree un ciclo de que si añado 3 datos por ende
     if destino_turistico.lower() == "guajira": #aqui hice un if para crear un subtotal sobre el numero o el precio de adulto y niños para cada destino
         subtotal = numero_adultos * 1450000 + numero_ninos * 870000
         total_guajira += subtotal
+        cant_personasgj = numero_ninos+numero_adultos #creacion de variable unica
     elif destino_turistico.lower() == "chicamocha": # cree else if para seguir con la funcion de traer el subtotal de cada uno dependiendo de el resto de destinos
         subtotal = numero_adultos * 1600000 + numero_ninos * 960000
         total_chicamocha += subtotal
+        cant_personascm=numero_ninos+numero_adultos #creacion de variable unica
     elif destino_turistico.lower() == "llanos":
         subtotal = numero_adultos * 1200000 + numero_ninos * 720000
         total_llanos += subtotal
+        cant_personasor=numero_ninos+numero_adultos #creacion de variable unica
 
 #el .lower no es necesario pero lo use para que el caracter se me convirtiera en minusculas en pocas palabras que el texto sea en MINUSCULA 
 
@@ -45,6 +48,9 @@ for _ in range(3): #con este for cree un ciclo de que si añado 3 datos por ende
 # en este le imprimo lo ultimo solicitado en el trabajo trayendo cada total de las cosas
 
 print("\nResultados Finales:")
+print("Cantidad de personas que viajan para la Guajira:", cant_personasgj)
+print("Cantidad de personas que viajan para Cañón del Chicamocha:", cant_personascm)
+print("Cantidad de personas que viajan para los Llanos Orientales:",cant_personasor)# creamos una variable de cantidad de personas dentro de los IF para la cantidad de personas en cada destino 
 print("Total de dinero de los viajes para la Guajira:", total_guajira)
 print("Total de dinero de los viajes para Cañón del Chicamocha:", total_chicamocha)
 print("Total de dinero de los viajes para los Llanos Orientales:", total_llanos)
